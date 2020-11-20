@@ -10,23 +10,30 @@ function numberMenu(menu, prefix="") {
     });
 }
 
-function createMenuItems() {
+function createMenuItems(parentNode) {
     numeredMenu = numberMenu(menu);
 
     const menuItemTemplate = document.getElementById("menu-item");
-    const menuList = document.querySelector(".navigation__list");
-    var fragment = new DocumentFragment();
+    var fragment = new DocumentFragment();    
+    for (let i in numeredMenu) {
+        const item = numeredMenu[i];
+        let menuItem;
+        if (Array.isArray(item)) {
 
-    for (let item of numeredMenu) {
-        const menuItem = menuItemTemplate.content.cloneNode(true);
-        fragment.appendChild(menuItem);
+        } else {
+            menuItem = menuItemTemplate.content.cloneNode(true);
+            menuItem.querySelector(".navigation__link").text = item;
+            fragment.appendChild(menuItem);
+        }
+        
     }
-
-    menuList.appendChild(fragment);
-
-
     
-
+    parentNode.appendChild(fragment);
+    
+    
+    
+    
 }
 
-createMenuItems();
+const menuList = document.querySelector(".navigation__list");
+createMenuItems(menuList);
