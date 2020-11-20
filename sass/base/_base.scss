@@ -1,0 +1,17 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; // Force inheritance. Better practice
+}
+
+html {
+    font-size: 62.5%; // 10/16 = 0.625. This set allows users to change default font-size
+}
+
+
+body {
+    box-sizing: border-box; // Not inherited
+    overflow-y: hidden;
+}

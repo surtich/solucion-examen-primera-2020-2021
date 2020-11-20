@@ -1,0 +1,19 @@
+.main {
+    position: absolute;
+    top: 8rem;
+    left: 25vw;
+    
+    &__wrapper {
+        padding: 3rem;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-weight: 400;
+        color: $color-primary;
+    }
+
+    &__content {
+        font-size: 1.5rem;
+    }
+}

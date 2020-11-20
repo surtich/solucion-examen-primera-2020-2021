@@ -1,0 +1,8 @@
+@mixin clearfix {
+    &:after {
+        // clearfix hack to avoid row has 0px width
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

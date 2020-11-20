@@ -1,0 +1,17 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 25vw;
+    height: 8rem;
+    width: 100%;
+    background-color: $color-primary;
+    color: $color-white !important;
+    font-size: 2rem;
+    
+    &__breadcrumb {
+        position: absolute;
+        top: 50%;
+        left: 5rem;
+        transform: translateY(-50%);
+    }
+}

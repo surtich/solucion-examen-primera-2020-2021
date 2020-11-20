@@ -1,0 +1,7 @@
+body {
+    font-family: "Roboto",
+        sans-serif; // font is inherit by child tags. More efficient then use the universal selector 
+    font-weight: 400; // font-size: 16px;*/ // Remove . Now we are using 10px root font-size
+    line-height: 1.7;
+    padding: 0rem; // padding is not inherit 
+}
