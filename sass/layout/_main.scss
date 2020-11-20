@@ -2,9 +2,13 @@
     position: absolute;
     top: 8rem;
     left: 25vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
     
     &__wrapper {
         padding: 3rem;
+        height: 150%;
     }
 
     &__title {
@@ -16,4 +20,6 @@
     &__content {
         font-size: 1.5rem;
     }
+
+
 }

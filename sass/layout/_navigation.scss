@@ -1,13 +1,13 @@
 .navigation {
     margin-top: 2.5rem;
     font-size: 1.5rem;
-    color: $color-grey;
+    color: $color-grey-dark;
     
     &__item {
         position: relative;
         margin-top: 1rem;
         margin-left: 1rem;
-        list-style: none;
+        list-style: none;        
         &:not(:last-child) {
             margin-bottom: 2rem;
         }
@@ -21,25 +21,54 @@
             display: inline-block;
             transition: all 0.2s;
         }
+        &--selected {
+            font-weight: 800;
+        }
     }
 
     &__toggle {
         position: absolute;
         top: 0;
         right: 0.5rem;
-        cursor: pointer;
-        
+
         & > * {
             text-align: center;
             border-radius: 50%;
             padding: 1rem;
-            transition: background-color 0.2s;
+            transition: background-color 0.4s;
 
-            &:hover {
+            &:hover {                
                 background-color: $color-grey-light;
             }
         }
 
-    }
+        &-link {
+
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        }
+
+        &__checkbox {
+            display: none;
+        }
+
+        &__checkbox:checked+label .icon-arrows-down {
+            display: none;
+        }
+
+        &__checkbox:not(:checked)+label .icon-arrows-up {
+            display: none;
+        }
+
+
+
+        &__sublist {
+            &--hidden {
+                display: none;
+            }
+}
 }
 

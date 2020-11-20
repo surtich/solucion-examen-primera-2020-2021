@@ -19,86 +19,41 @@
 
     <div class="side-menu">
         <div class="side-menu__logo-box">
-            <a href="#">
+            <a class="side-menu__link" href="#">
                 <img class="side-menu__logo" src="img/logo-with-text.png" alt="Dive into Deep Learning">
             </a>
         </div>
         <nav class="navigation">
             <ul class="navigation__list">
-                <li class="navigation__item navigation__item--l1"><span class="navigation__link-wrapper"><a
-                            class="navigation__link" href="#">1. Introduction</a></span></li>
-                <li class="navigation__item navigation__item--l1">
-                    <span class="navigation__link-wrapper"><a class="navigation__link" href="#">2.
-                            Preliminaries</a><span class="navigation__toggle"><a class="navigation__toggle-link"><i
-                                    class="icon icon-arrows-down"></i></a></span>
-                        <ul class="navigation__sublist">
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.1. Data Manipulation</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.2. Data Preprocessing</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.3. Linear Algebra</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.4. Calculus</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.5. Automatic Differentiation</a></span>
-                            </li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.6. Probability</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">2.7. Documentation</a></span></li>
-                        </ul>
-                </li>
-                <li class="navigation__item navigation__item--l1">
-                    <span class="navigation__link-wrapper"><a class="navigation__link" href="#">3. Linear Neural
-                            Networks</a><span class="navigation__toggle"><a class="navigation__toggle-link"><i
-                                    class="icon icon-arrows-down"></i></a></span>
-                        <ul class="navigation__sublist">
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.1. Linear
-                                        Regression</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.2. Linear Regression
-                                        Implementation from Scratch</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.3. Concise
-                                        Implementation of Linear Regression</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.4. Softmax
-                                        Regression</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.5. The Image
-                                        Classification Dataset</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.6. Implementation
-                                        of Softmax Regression from Scratch</a></span></li>
-                            <li class="navigation__item navigation__item--l2"><span class="navigation__link-wrapper"><a
-                                        class="navigation__link" href="#">3.7. Concise
-                                        Implementation of Softmax Regression</a></span></li>
-                        </ul>
-                </li>
+                
             </ul>
         </nav>
     </div>
-    <header class="header">
+    <header class="header u-hidden">
         <nav class="header__breadcrumb">
-            <a class="navigation__link" href="#"><span class="section-number">4. </span>Multilayer
-                Perceptrons</a><i class="icon icon-arrows-right"></i>
-            <a class="navigation__link" href="#"><span class="section-number">4.1. </span>Multilayer
-                Perceptrons</a>
         </nav>
     </header>
     <main class="main">
         <div class="main__wrapper">
-            <div class="main__title">4.1. Multilayer Perceptrons</div>
+            <div class="main__title">Dive into Deep Learning</div>
             <div class="main__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas minima molestiae
                 vero! Porro sint dolorum excepturi natus rem ab, rerum tempora dignissimos odio laboriosam voluptatum
                 eius placeat tempore reiciendis et?</div>
         </div>
     </main>
-    <template id="menu-item">
-        <li class="navigation__item navigation__item--l1"><span class="navigation__link-wrapper"><a class="navigation__link"
-                    href="#">#.# Menu Item</a></span></li>
+    <template id="menu-item-template">
+        <li class="navigation__item"><span class="navigation__link-wrapper"><a class="navigation__link" href="#">#.#
+                    Menu
+                    Item</a></span>
+            <div class="navigation__toggle navigation__toggle--collapsed">
+                <input class="navigation__checkbox" type="checkbox">
+                <label>
+                    <a class="navigation__toggle-link"><i class="icon icon-arrows-down"></i><a
+                            class="navigation__toggle-link"><i class="icon icon-arrows-up"></i></a>
+                </label>
+            </div>
+            <ul class="navigation__sublist navigation__sublist--hidden"></ul>
+        </li>
     </template>
     <script src="js/script.js"></script>
 </body>
